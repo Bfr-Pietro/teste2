@@ -1,0 +1,557 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+:root {
+    --bg-color-light: #ffffff;
+    --text-color-light: #000000;
+    --bg-color-dark: #333333;
+    --text-color-dark: #ffffff;
+  }
+  
+  body {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.5s, color 0.5s;
+    overflow-x: hidden;
+  }
+  body.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+  }
+  header.dark-mode {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-dark);
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .switch label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .switch label:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + label {
+    background-color: #2196F3;
+  }
+  
+  input:checked + label:before {
+    transform: translateX(26px);
+  }
+  .arrow-down {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 70px;
+    color: white;
+    text-decoration: none;
+    animation: colorChange 2s infinite alternate, jump 0.5s infinite;
+  }
+  .arrow-down2 {
+    position: absolute;
+    bottom: -950px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 70px;
+    color: white;
+    text-decoration: none;
+    animation: colorChange2 2s infinite alternate, jump 0.5s infinite;
+  }
+  
+  .arrow-down:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  @keyframes colorChange {
+    0% {
+        color: #38B6FF;
+    }
+    100% {
+        color: #ffffff;
+    }
+}
+
+  @keyframes colorChange2 {
+    0% {
+        color: #38B6FF;
+    }
+    100% {
+        color: #000000;
+    }
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+  header>div>a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+  }
+  header{
+    background-color: black;
+    color: #fff;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* position: fixed; */
+  }
+  #header2{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  #header2>a:hover{
+    transform: scale(1.05);
+    color: #38B6FF;
+  }
+  #header3:hover{
+    color: #38B6FF;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  #header3>img{
+    width: 2.5vw;
+  }
+  #header3{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .switch{
+    margin-left: 10px;
+  }
+  #descricaoscratch{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  #descricaoscratch>h1{
+    font-size: 40px;
+  }
+  #descricaoscratch>img{
+    width: 33vw;
+  }
+  #descricaoscratch>p{
+    font-size: 20px;
+    width: 40vw;
+  }
+  #guitarhero{
+    display: flex;
+    height: 110vh;
+    width: 100vw;
+  }
+  #guitarherotextos{
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+  #guitarherotextos>p{
+    width: 40vw;
+    font-size: 23px;
+  }
+  #guitarherotextos>h1{
+    font-size: 40px;
+  }
+  #jogoguitarhero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+  }
+  #gh{
+    display: flex;
+    flex-direction: column;
+  }
+  #jogossection{
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    gap: 60px;
+  }
+  #botaoguitarhero{
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 10vw;
+    height: 5vh;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  #botaoguitarhero>a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 18px;
+  }
+  #ondeficaobotaoguitarhero{
+    padding-right: 30vw;
+  }
+  #botaoguitarhero>a>img{
+    width: 1.5vw;
+  }
+  #botaoguitarhero:hover{
+    transform: scale(1.03);
+  }
+  #botaoguitarhero>a:hover{
+    color: #38B6FF;
+  }
+  .jogos{
+    /* background-color: green; */
+    width: 22vw;
+    height: 70vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    color: #ffffff;
+    box-shadow: 1px 1px 2.5px 2.5px white;
+  }
+  .ondeficaosjogos{
+  display: flex;
+  gap: 50px;
+  }
+  #jogossection>h1{
+    color: #ffffff;
+    font-size: 40px;
+  }
+  .jogos>img{
+    width: 20vw;
+  }
+  .jogar>img{
+    width: 1.5vw;
+  }
+  .jogar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+    width: 7vw;
+    height: 4.5vh;
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px 2px white;
+  }
+  .jogar>p{
+    font-weight: bold;
+    font-size: 17px;
+  }
+  .jogar:hover{
+    transform: scale(1.1);
+    color: #38B6FF;
+  }
+  a{
+    text-decoration: none;
+  }
+  .jogos:hover{
+    transform: scale(1.04);
+  }
+footer{
+  background-color: #000000;
+  padding-top: 9vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  padding-top: 60px;
+  text-align: center;
+}
+#footerlogos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+#imagem1{
+  width: 8vw;
+}
+#imagem2{
+  width: 9vw;
+}
+#imagem3{
+  width: 19vw;
+}
+#footerlinks>a::after{
+content: " ";
+width: 0%;
+height: 2px;
+background-color: #ffffff;
+position: absolute;
+bottom: 0;
+left: 0;
+transition: 0.5s ease-in-out;
+}
+#footerlinks a:hover::after{
+width: 50px;
+}
+#footerlinks>a{
+position: relative;
+}
+footer>div>a{
+text-decoration: none;
+color: #ffffff;
+}
+#footerlinks{
+display: flex;
+gap: 20px;
+align-items: center;
+justify-content: center;
+}
+footer>p{
+  color: #ffffff;
+  font-size: 20px;
+}
+@media (max-width:900px){
+  .ondeficaosjogos{
+    flex-direction: column;
+  }
+  .jogos{
+    width: 60vw;
+    height: 50vh;
+  }
+  #header3>h1{
+    display: none;
+  }
+  #header3>img{
+    width: 9vw;
+  }
+  #descricaoscratch{
+    height: 90vh;
+    padding-bottom: 10vh;
+    gap: 20px;
+  }
+  #descricaoscratch>h1{
+    font-size: 6vw;
+  }
+  #descricaoscratch>p{
+    font-size: 3vw;
+    width: 75vw;
+  }
+  #descricaoscratch>img{
+    height: 400px;
+    width: 550px;
+  }
+  header{
+    justify-content: center;
+    gap: 10vw;
+    width: 100vw;
+  }
+  #header2>a{
+    font-size: 2.5vw;
+  }
+  #switch{
+    transform: scale(0.9);
+  }
+  .arrow-down{
+    bottom: -10px;
+  }
+  .arrow-down2{
+    bottom: -1100px;
+  }
+  #guitarhero{
+    flex-direction: column;
+  }
+  #imagem1{
+    width: 20vw;
+  }
+  #imagem2{
+    width: 21vw;
+  }
+  #imagem3{
+    width: 30vw;
+  }
+  #guitarhero{
+    padding: 3vh;
+    gap: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120vh;
+    padding-bottom: 10vh;
+  }
+  #guitarherotextos{
+    width: 90vw;
+  }
+  #guitarherotextos>p{
+    width: 80vw;
+  }
+  #botaoguitarhero{
+    width: 20vw;
+    position: relative;
+    left: 350px;
+    bottom: 60px;
+  }
+  #botaoguitarhero>a>img{
+    width: 4vw;
+  }
+  footer>p{
+    font-size: 2.5vw;
+  }
+  .jogos{
+    padding: 1vw;
+  }
+  .jogos>img{
+    width: 40vw;
+  }
+  .jogos>p{
+    font-size: 2.3vw;
+  }
+  .jogos>h1{
+    font-size: 5vw;
+  }
+  .jogar{
+    width: 20vw;
+  }
+  .jogar>img{
+    width: 5vw;
+  }
+  #footerlinks>a>img{
+    width: 8vw;
+  }
+  #jogoguitarhero{
+    width: 60vw;
+    height: 40vh;
+  }
+}
+@media (max-width:750px){
+  #botaoguitarhero{
+    width: 20vw;
+    position: relative;
+    left: 300px;
+    bottom: 60px;
+    width: 25vw;
+  }
+}
+@media (max-width:700px){
+  #descricaoscratch>img{
+    height: 350px;
+    width: 500px;
+  }
+  #descricaoscratch{
+    gap: 4.5vh;
+  }
+  .jogos{
+    padding: 3vh;
+    height: 53vh;
+  }
+}
+@media (max-width:650px){
+  #descricaoscratch>img{
+    height: 300px;
+    width: 450px;
+  }
+  .jogos>img{
+    width: 40vw;
+  }
+  #botaoguitarhero{
+    width: 20vw;
+    position: relative;
+    left: 250px;
+    bottom: 60px;
+    width: 30vw;
+  }
+}
+@media(max-width:600px){
+  #botaoguitarhero{
+    width: 20vw;
+    position: relative;
+    left: 200px;
+    bottom: 60px;
+    width: 30vw;
+  }
+}
+@media (max-width:550px){
+  #descricaoscratch>img{
+    height: 250px;
+    width: 400px;
+  }
+  .jogos{
+    width: 75vw;
+  }
+  #descricaoscratch{
+    height: 80vh;
+  }
+  .arrow-down{
+    bottom: 100px;
+  }
+  .arrow-down2{
+    bottom: -1030px;
+  }
+}
+@media (max-width:460px){
+  #descricaoscratch>img{
+    height: 200px;
+    width: 350px;
+  }
+}
+@media (max-width:450px){
+  #botaoguitarhero{
+    width: 20vw;
+    position: relative;
+    left: 170px;
+    bottom: 60px;
+    width: 37vw;
+  }
+}
